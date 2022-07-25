@@ -1,3 +1,6 @@
 # Angular E-commerce
 
-for admin: admin@admin.com
+for admin
+==========================
+email: admin@admin.com 
+password: admin@admin.com 
