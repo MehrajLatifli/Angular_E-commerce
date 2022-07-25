@@ -9,7 +9,7 @@
   </thead>
   <tbody *ngFor="let item of baskets">
     <tr *ngFor="let item2 of books">
-      <th scope="row">
+      <th scope="row" *ngIf="item.userId==userId">
 
 
         <div *ngIf="item2.id==item.bookId">
@@ -19,7 +19,7 @@
         </div>
 
       </th>
-      <td>
+      <td *ngIf="item.userId==userId">
 
         <div *ngIf="item2.id==item.bookId">
 
@@ -30,7 +30,7 @@
 
       </td>
 
-      <td>
+      <td *ngIf="item.userId==userId">
 
         <div *ngIf="item2.id==item.bookId">
 
@@ -42,7 +42,7 @@
 
       </td>
 
-      <td >
+      <td *ngIf="item.userId==userId">
 
         <div *ngFor="let item3 of genres">
 

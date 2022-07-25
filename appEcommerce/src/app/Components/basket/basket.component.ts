@@ -20,7 +20,7 @@ export class BasketComponent implements OnInit {
   books: Book[]=[];
   genres: Genre[]=[];
 
-  baskets: Basket[]=[];
+  baskets: any[]=[];
 
   userId:any;
 
