@@ -273,13 +273,13 @@
 
 
 <ng-template #bookList2 let-mybooks="books" >
-  <div class="row row-cols-1 row-cols-md-6 g-6 mb-6">
+  <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
     <div *ngFor="let item of mybooks" class="col">
       <div class="card h-100">
         <img src="{{ item.imageUrl }}" alt="" class="card-img-top"/>
         <div class="card-body">
-          <!-- <h5 class="card-title">{{ item.title | uppercase }}</h5> -->
-          <p class="card-text">{{ item.description }}</p>
+          <h5 class="card-title">{{ item.title | uppercase }}</h5>
+          <!-- <p class="card-text">{{ item.description }}</p> -->
         </div>
       </div>
     </div>
