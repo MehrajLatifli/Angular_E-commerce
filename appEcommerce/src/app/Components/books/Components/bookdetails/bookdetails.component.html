@@ -42,7 +42,7 @@
         <br>
 
         <div *ngFor="let itemcomment of comments">
-          <p>
+          <p *ngIf="itemcomment.userId==userId">
             {{itemcomment.useremail}}: {{itemcomment.commnettext}}
           </p>
         </div>

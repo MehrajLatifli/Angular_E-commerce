@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" >
   <thead>
     <tr>
       <th scope="col">N</th>
@@ -7,56 +7,82 @@
       <th scope="col">Genre</th>
     </tr>
   </thead>
-  <tbody *ngFor="let item of baskets">
-    <tr *ngFor="let item2 of books">
-      <th scope="row" *ngIf="item.userId==userId">
+  <tbody *ngFor="let item of baskets" >
+    <tr  >
+      <th scope="row" *ngIf="item.userId==userId" >
 
+        <div *ngFor="let item2 of books">
 
-        <div *ngIf="item2.id==item.bookId">
-          <p>
-            {{item2.productcode}}
-          </p>
+          <div *ngIf="item2.id==item.bookId">
+            <p>
+              {{item2.productcode}}
+            </p>
+          </div>
+
         </div>
+
+
 
       </th>
       <td *ngIf="item.userId==userId">
 
-        <div *ngIf="item2.id==item.bookId">
+        <div *ngFor="let item2 of books">
 
-          <img style="width: 50px" src="{{item2.imageUrl}}" alt="">
-          <img style="width: 50px" src="{{item2.subimageUrl}}" alt="">
+          <div *ngIf="item2.id==item.bookId">
+
+            <img style="width: 50px" src="{{item2.imageUrl}}" alt="">
+            <img style="width: 50px" src="{{item2.subimageUrl}}" alt="">
+
+          </div>
 
         </div>
+
+
 
       </td>
 
       <td *ngIf="item.userId==userId">
 
-        <div *ngIf="item2.id==item.bookId">
+        <div *ngFor="let item2 of books">
 
-          <p>
-            {{item2.title}}
-          </p>
+          <div *ngIf="item2.id==item.bookId">
+
+            <p>
+              {{item2.title}}
+            </p>
+
+          </div>
 
         </div>
+
+
 
       </td>
 
       <td *ngIf="item.userId==userId">
 
-        <div *ngFor="let item3 of genres">
+
+        <div *ngFor="let item2 of books">
 
 
-        <div *ngIf="item2.id==item.bookId && item.bookId==item2.id && item3.id==item2.genreId">
+          <div *ngFor="let item3 of genres">
 
 
-          <p>
-            {{item3.genrename}}
-          </p>
+            <div *ngIf="item2.id==item.bookId && item.bookId==item2.id && item3.id==item2.genreId">
+
+
+              <p>
+                {{item3.genrename}}
+              </p>
+
+            </div>
+
+            </div>
+
 
         </div>
 
-        </div>
+
 
 
       </td>

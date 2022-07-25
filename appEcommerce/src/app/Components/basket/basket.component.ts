@@ -47,6 +47,12 @@ wishLists: any[]=[];
 
   ngOnInit(): void {
 
+    document.querySelectorAll('table tr').forEach(function(e, i) {
+      if (e.textContent.trim().length == 0) { // if row is empty
+          e.parentNode.removeChild(e);
+      }
+  })
+
     this.authservice.user.subscribe(user=>{
 
       if(user){
